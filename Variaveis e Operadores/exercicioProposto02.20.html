@@ -22,8 +22,9 @@
             alert("Empate");
         } else {
             var sorteio = parseInt(Math.random() * 2);
+            alert("Número Sorteado: " + sorteio);
         }
-        if (jogador1 < jogador2 || sorteio === 0) {
+        if (sorteio === 0 && jogador1 < jogador2 || sorteio === 1 && jogador1 > jogador2) {
             alert("O Jogador 1 ganhou!");
         } else {
             alert("O Jogador 2 ganhou!");
