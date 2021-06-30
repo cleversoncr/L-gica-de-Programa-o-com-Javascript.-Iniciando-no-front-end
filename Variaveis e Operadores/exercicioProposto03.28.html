@@ -9,25 +9,21 @@
 </head>
 
 <body>
-    <h1>Controle de decisão: switch... case</h1>
+    <h1>28.Exercício proposto</h1>
 
 
 
     <script>
-        var numero = prompt("Digite um número");
-        numero = parseFloat(numero);
+        var ano = 1004;
 
-        for (var i = 1; i <= 1000; i++) {
-            document.write(numero + " x " + i + " = " + (numero * i) + " <br>");
-
-            if (i % 10 === 0) {
-                document.write("<hr>");
+        while (ano <= 2017) {
+            if (!(ano % 100 === 0) || (ano % 400 === 0)) {
+                document.write(ano + "<br>");
+            } else {
+                document.write(ano + " não é bisexto<br>");
             }
-
-
+            ano += 4;
         }
-
-        document.write("saiu do loop");
     </script>
 </body>
 
