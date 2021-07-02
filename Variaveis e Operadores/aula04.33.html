@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variáveis e operadores</title>
+    <title>Funções</title>
 </head>
 
 <body>
-    <h1>Controle de decisão: switch... case</h1>
+    <h1>Atrelando funções à eventos disparados por elementos no HTML</h1>
 
     <button onclick="mostrarTrabuada()">Criar Tabuada</button>
     <button onclick="limparTabuada()">Limpar Tabuada</button>
@@ -18,17 +18,26 @@
 
     <script>
         function mostrarTabuada() {
-            alert("mostrarTabuada chamada");
+            var n = prompt("Digite um número");
+            limparTabuada();
+            n = parseFloat(n);
+            var i = 1;
+            while (i <= 1000) {
+                mensagem += n + " x " + i + " = " + (n * i) + "<br>";
+                i++;
+            }
 
+            output.innerHTML = mensagem;
         }
-        mostrarTabuada();
 
+        function limparTabuada() {
+            mensagem = " ";
+            output.innerHTML = mensagem;
+        }
 
         var output = document.querySelector("#output");
 
         var mensagem = " ";
-
-        output.innerHTML = mensagem;
     </script>
 </body>
 
