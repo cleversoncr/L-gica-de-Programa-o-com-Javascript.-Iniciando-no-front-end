@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 6: Trabalhando com conjunto de dados</title>
+</head>
+
+<body>
+    <h1>55. Exercício proposto</h1>
+
+    <div id="output"></div>
+
+</body>
+
+<script>
+    var user1 = new Object();
+    user1.nome = 'Mateus';
+    user1.email = 'mateus@gmail.com';
+
+
+    var user2 = new Object();
+    user2.nome = 'Tiago';
+    user2.email = 'tiago@gmail.com';
+
+    var user3 = new Object();
+    user3.nome = 'João';
+    user3.email = 'joao@gmail.com';
+
+    var users = new Array(user1, user2, user3);
+
+    console.log(users);
+
+    var msg = '';
+    var x = 0;
+    while (users[x]) {
+        console.log(users[x].nome);
+        msg += users[x].nome + ' - ' + users[x].email + '<br>';
+        x++;
+    }
+
+    document.querySelector('#output').innerHTML = msg;
+</script>
+
+
+
+</html>

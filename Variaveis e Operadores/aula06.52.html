@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção 6: Trabalhando com conjunto de dados</title>
+</head>
+
+<body>
+    <h1>52. Objetos e propriedades de objetos</h1>
+
+    <div id="output"></div>
+</body>
+
+<script>
+    var produto = new Object();
+    produto.nome = 'caneta';
+    produto.preco = 2.2;
+    produto.estoque = 10;
+
+    produto.comprar = function() {
+        console.log('comprou caneta');
+        this.estoque--;
+        console.log(this.estoque);
+    }
+
+    var msg = '';
+    msg += 'nome: ' + produto.nome + '<br>';
+    msg += 'preço: R$' + produto.preco + '<br>';
+    msg += 'estoque: ' + produto.estoque + '<br>';
+
+    document.querySelector('#output').innerHTML = msg;
+</script>
+
+</html>
